@@ -1,21 +1,18 @@
-const randWords = [ 'cool', 
-// 'bird', 'square', 'test', 'triangle'
-]
+const randWords = [ 'cool', 'bird', 'square', 'test', 'triangle']
 let wrongGuess = 0
 let randWord = ''
-var userGuesses = []
-var header = document.getElementById("header")
-var header2 = document.getElementById("header2")
-var userInput = document.getElementById("userInput")
-var btn = document.getElementById("btn")
-var msg = ''
+let userGuesses = []
+let header = document.getElementById("header")
+let header2 = document.getElementById("header2")
+let userInput = document.getElementById("userInput")
+let btn = document.getElementById("btn")
+let msg = ''
 
-
-function startGame() {
+const startGame = () => {
   randWord = randWords[Math.floor(Math.random() * randWords.length)]
 }
 
-function game() {
+const game = () => {
   let userGuessValue = userInput.value.toLowerCase();
 
   if (userGuesses.indexOf(userGuessValue) === -1) {
@@ -29,7 +26,7 @@ function game() {
   }
 }
 
-function guessedWord() {
+const guessedWord = () => {
   msg = randWord.split('').map(letter => (
     userGuesses.indexOf(letter) >= 0 ? letter : " _ ")
   ).join('')
@@ -42,7 +39,7 @@ function guessedWord() {
   }
 }
 
-function wrongChoice() {
+const wrongChoice = () => {
   wrongGuess++
   if (wrongGuess === 6) {
     header.innerHTML = 'The answer was: ' + randWord
@@ -51,7 +48,7 @@ function wrongChoice() {
   }
 }
 
-function endGame() {
+const endGame = () => {
   userInput.setAttribute("type", "hidden")
   btn.setAttribute("type", "hidden")
   userInput.disabled = true
