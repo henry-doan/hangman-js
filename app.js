@@ -1,11 +1,11 @@
-const randWords = [ 'cool', 'bird', 'square', 'test', 'triangle']
+const randWords = [ 'cool', 'bird', 'square', 'bad', 'easy', 'lol', 'code', 'ice', 'fire', 'icecream', 'hangman', 'destroy', 'computer', 'book', 'dictionary', 'technology', 'power', 'thunder', 'controller', 'dexterity', 'keyboard', 'thunderous', 'blizzard', 'hazardous', 'algorithm', 'operation', 'assignment', 'despicable', 'triangle']
 let wrongGuess = 0
 let randWord = ''
 let userGuesses = []
-let header = document.getElementById("header")
-let header2 = document.getElementById("header2")
-let userInput = document.getElementById("userInput")
-let btn = document.getElementById("btn")
+let header = document.getElementById('header')
+let header2 = document.getElementById('header2')
+let userInput = document.getElementById('userInput')
+let btn = document.getElementById('btn')
 let msg = ''
 
 const startGame = () => {
@@ -28,7 +28,7 @@ const game = () => {
 
 const guessedWord = () => {
   msg = randWord.split('').map(letter => (
-    userGuesses.indexOf(letter) >= 0 ? letter : " _ ")
+    userGuesses.indexOf(letter) >= 0 ? letter : ' _ ')
   ).join('')
 
   header.innerHTML = msg;
@@ -49,8 +49,8 @@ const wrongChoice = () => {
 }
 
 const endGame = () => {
-  userInput.setAttribute("type", "hidden")
-  btn.setAttribute("type", "hidden")
+  userInput.setAttribute('type', 'hidden')
+  btn.setAttribute('type', 'hidden')
   userInput.disabled = true
   btn.disabled = true
 }
