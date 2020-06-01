@@ -5,11 +5,17 @@ let userGuesses = []
 let header = document.getElementById('header')
 let header2 = document.getElementById('header2')
 let userInput = document.getElementById('userInput')
+let livesHeader = document.getElementById('lives')
 let btn = document.getElementById('btn')
+let gameSec = document.getElementById('game')
+let startBtn = document.getElementById('startBtn')
+let reset = document.getElementById('reset')
 let msg = ''
 
 const startGame = () => {
   randWord = randWords[Math.floor(Math.random() * randWords.length)]
+  gameSec.style.display = 'block'
+  startBtn.style.display = 'none'
 }
 
 const game = () => {
@@ -41,9 +47,11 @@ const guessedWord = () => {
 
 const wrongChoice = () => {
   wrongGuess++
+  livesHeader.innerHTML = `Incorrect guess: ${wrongGuess}`
   if (wrongGuess === 6) {
-    header.innerHTML = 'The answer was: ' + randWord
+    header.innerHTML = `The answer was: ${randWord}`
     header2.innerHTML = 'You Lost!!!'
+    livesHeader.style.display = 'none'
     endGame()
   }
 }
@@ -54,3 +62,4 @@ const endGame = () => {
   userInput.disabled = true
   btn.disabled = true
 }
+

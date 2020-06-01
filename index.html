@@ -8,11 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button onclick="startGame()" id='startBtn'>Click here for random word to guess</button>
+  <div>
+    <h1 class="title">Hangman</h1>
+    <br />
+    <br />
+    <button onclick="startGame()" id='startBtn'>Click Here For <br />Random Word To Guess</button>
+  </div>
   <div id="game">
     <h1 id="header"></h1>
     <h1 id="header2"></h1>
-    <input id="userInput" type="text">
+    <h2 id="lives"></h2>
+    <input id="userInput" type="text" maxlength="1" placeholder="Type your guess here">
     <input id="btn" type="button" value="Guess" onClick="game()">
   </div>
 </body>
