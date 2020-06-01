@@ -16,6 +16,12 @@ const startGame = () => {
   randWord = randWords[Math.floor(Math.random() * randWords.length)]
   gameSec.style.display = 'block'
   startBtn.style.display = 'none'
+
+  msg = randWord.split('').map(letter => (
+    userGuesses.indexOf(letter) >= 0 ? letter : ' _ ')
+  ).join('')
+
+  header.innerHTML = msg;
 }
 
 const game = () => {
