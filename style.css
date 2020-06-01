@@ -18,7 +18,7 @@ body {
 }
 
 #startBtn {
-  background-color: #ffffff; /* Green */
+  background-color: #ffffff; 
   border: none;
   color: #F9C200;
   padding: 15px 32px;
@@ -30,7 +30,7 @@ body {
 }
 
 #btn {
-  background-color: #ffffff; /* Green */
+  background-color: #ffffff; 
   border: none;
   color: #F9C200;
   padding: 15px 32px;
@@ -65,3 +65,15 @@ input[type=text]:focus {
   border: 3px solid #F9C200;
 }
 
+#reset {
+  display: none;
+  background-color: #ffffff;
+  border: none;
+  color: #F9C200;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 auto;
+}

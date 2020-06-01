@@ -61,5 +61,9 @@ const endGame = () => {
   btn.setAttribute('type', 'hidden')
   userInput.disabled = true
   btn.disabled = true
+  reset.style.display = 'block'
 }
 
+const resetGame = () => {
+  location.reload();
+}
