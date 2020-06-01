@@ -77,3 +77,26 @@ input[type=text]:focus {
   cursor: pointer;
   margin: 0 auto;
 }
+
+.watermark {
+  position: fixed;
+  bottom: 5px;
+  right: 45px;
+  opacity: 0.5;
+  z-index: 99;
+  color: white;
+  font-size: 35px;
+ }
+ 
+ .watermark a:link {
+   color: white;
+   text-decoration: none;
+ }
+ 
+ a:visited {
+   color: white;
+ }
+ 
+ a:hover {
+   text-decoration: underline !important;
+ }
